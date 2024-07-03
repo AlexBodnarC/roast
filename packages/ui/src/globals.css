@@ -66,6 +66,22 @@
   }
 }
 
+@layer components {
+  .scaning {
+    animation: scaning 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  }
+
+  @keyframes scaning {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(calc(100dvh - 7rem));
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
